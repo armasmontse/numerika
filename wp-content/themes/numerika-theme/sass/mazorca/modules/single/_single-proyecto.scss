@@ -1,0 +1,291 @@
+$col-1: 100%/12;
+/*width: calc(#{$col-1} * 8);*/
+
+// S i n g l e   p r o y e c t o
+.single-proyecto {
+	&.section{
+		margin-top: 75px;
+	}
+
+
+	&__container {
+		@extend %section-container;
+		margin: 90px auto 0;
+		color: c(gray);
+		@include under(mobile) {
+			margin: 60px auto 0;
+		}
+	}
+
+	&__row-flex {
+		display: flex;
+		margin-bottom: 90px;
+		@include under(mobile) {
+			flex-wrap: wrap;
+			margin-bottom: 60px;
+		}
+	}
+
+	&__group {
+
+		&-one {
+			width: 30%;
+			height: 100%;
+			// background-color: red;
+			@include under(md) {
+				width: 25%;
+			}
+			@include under(mobile) {
+				width: 100%;
+			}
+		}
+
+		&-two {
+			width: 70%;
+			height: 100%;
+			// background-color: yellow;
+			@include under(md) {
+				width: 75%;
+			}
+			@include under(mobile) {
+				width: 100%;
+			}
+		}
+	}
+
+	&__title {
+		@extend %sectores-title;
+		letter-spacing: 1px;
+		@include under(mobile) {
+			margin-bottom: 30px;
+		}
+	}
+
+	/* Banner */
+	.banner {
+
+		&__bg {
+			width: 100%;
+			height: 360px;
+			background-color: c(gray);
+			background-image: url(../images/single/single-bg.jpg);
+			background-size: 100%;
+			background-repeat: no-repeat;
+			background-position: center;
+			@include under(mobile) {
+				height: auto;
+			}
+			@include under(xs) {
+				background-size: 150%;
+			}
+		}
+
+		&__container {
+			@extend %section-container;
+			margin: 0 auto;
+		}
+
+		&__row {
+			margin-top: 230px;
+			width: 100%;
+			display: flex;
+			@include under(mobile) {
+				margin-top: 80px;
+				position: relative;
+			}
+		}
+
+		&__group {
+
+			&-one {
+				width: 90%;
+				height: 100%;
+				@include under(sm) {
+					width: 80%;
+				}
+				@include under(xs) {
+					width: 70%;
+				}
+			}
+
+			&-two {
+				width: 10%;
+		        height: 100%;
+		        display: block;
+				flex-direction: column;
+				@include under(sm) {
+					width: 16%;
+					position: absolute;
+					right: 0;
+					bottom: 30px;
+					height: auto;
+				}
+				@include under(xs) {
+					width: 26%;
+				}
+			}
+		}
+
+
+		&__categoria {
+			@extend %single-banner-categoria;
+			@include under(mobile) {
+				margin-bottom: 20px;
+			}
+		}
+
+		&__proyecto {
+			@extend %single-banner-proyecto;
+			padding-right: 30%;
+			@include under(mobile) {
+				margin-bottom: 30px;
+				padding-right: 15%;
+			}
+		}
+
+		&__link {
+			@extend %link-single-banner;
+			padding-bottom: 5px;
+
+		}
+	}
+
+	// Planteamiento
+	.planteamiento {
+
+		&__content {
+			@extend %single-planteamiento-content;
+		}
+	}
+
+	// Solución
+	.solucion {
+
+		&__content {
+
+			@extend %contenido-wysiwyg-solucion;
+			color: c(gray);
+
+			h1, h2, h3, h4, h5, h6 {
+				margin-bottom: 15px;
+			}
+
+			p {
+				margin-bottom: 60px;
+				@include under (mobile) {
+					margin-bottom: 30px;
+				}
+
+				img {
+
+				}
+			}
+
+			iframe {
+				width: 100%;
+				height: 430px;
+				margin-bottom: 60px;
+				@include under (mobile) {
+					margin-bottom: 30px;
+					height: 350px;
+				}
+				@include under(xs) {
+					height: auto;
+				}
+			}
+		}
+
+		&__creditos {
+			@extend %candida-roman;
+			font-size: 14px;
+			line-height: 16px;
+			color: c(gray-medium);
+			width: 90%;
+			margin: 0 auto;
+		}
+	}
+
+	// Resultados
+	.resultados {
+		@extend %contenido-wysiwyg-solucion;
+
+		h1, h2, h3, h4, h5, h6 {
+			margin-bottom: 15px;
+		}
+
+		p {
+			margin-bottom: 60px;
+			@include under (mobile) {
+				margin-bottom: 30px;
+			}
+		}
+
+		iframe {
+			width: 100%;
+			height: 430px;
+			margin-bottom: 60px;
+			@include under (mobile) {
+				margin-bottom: 30px;
+				height: 350px;
+			}
+			@include under(xs) {
+				height: auto;
+			}
+		}
+	}
+
+	// Pleca
+    .pleca {
+        width: 100%;
+        background-color: c(gray);
+        text-align: center;
+        color: c(white);
+
+        &__container {
+            @extend %section-container;
+            margin: 60px auto;
+        }
+
+        &__title {
+            @extend %soluciones-pleca-title;
+            margin-bottom: 10px;
+        }
+
+        &__content {
+            @extend %soluciones-pleca-content;
+            margin-bottom: 60px;
+            width: 92%;
+            max-width: 720px;
+            margin: 0 auto 60px;
+        }
+
+        &__contact {
+
+			a {
+				@extend %link-pleca-contacto;
+				padding-bottom: 2px;
+			}
+		}
+	}
+
+	.contenido-to-top {
+		background-image: url(../images/iconos/top.svg);
+		background-size: 20px;
+		background-position: center;
+
+		width: 20px;
+		height: 20px;
+
+		position: fixed;
+		bottom: 190px;
+		right: 10%;
+		cursor: pointer;
+
+		&:hover {
+			background-image: url(../images/iconos/top-hover.svg);
+		}
+		@include under(sm) {
+			right: 3%;
+		}
+	}
+}

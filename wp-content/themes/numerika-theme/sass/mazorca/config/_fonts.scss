@@ -1,0 +1,32 @@
+//_________________________ Config:Fuentes _________________________ \\
+
+/**
+ * Declare fonts using the Mixin
+ */
+// declara-font-face($font-family, $font-filename, $font-weight: normal, $font-style: normal, $font-stretch: normal)
+
+// Numerika
+@include declara-font-face(CandidaStd, '../fonts/CandidaStd/CandidaStd-Bold', bold, normal );
+@include declara-font-face(CandidaStd, '../fonts/CandidaStd/CandidaStd-Italic', normal, italic );
+// @include declara-font-face(CandidaStd, '../fonts/CandidaStd/CandidaStd-Roman', normal, normal );
+
+@include declara-font-face(CandidaRoman, '../fonts/CandidaRoman/CandidaBT-Roman', normal, normal );
+
+
+@include declara-font-face(ITCAvantGardeStd, '../fonts/ITCAvantGardeStd/ITCAvantGardeStd-BkCn', 900, normal);
+@include declara-font-face(ITCAvantGardeStd, '../fonts/ITCAvantGardeStd/ITCAvantGardeStd-Demi', normal, normal);
+@include declara-font-face(ITCAvantGardeStd, '../fonts/ITCAvantGardeStd/ITCAvantGardeStd-MdCn', 500, normal);
+@include declara-font-face(ITCAvantGardeStd, '../fonts/ITCAvantGardeStd/ITCAvantGardeStd-XLt', 300, normal);
+
+
+/// Refer to font families through mapped variables.
+/// Font families must be written as lists, that is, between parenthesis.
+
+$fonts:(
+	candida:				('CandidaRoman', serif),
+	avant-gothic: 			('ITCAvantGardeStd', sans),
+);
+
+@function f($font) {
+	@return map-get($fonts, $font);
+}

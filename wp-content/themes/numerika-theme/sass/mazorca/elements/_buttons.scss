@@ -1,0 +1,25 @@
+%button {
+    max-width: 170px;
+	height: 50px;
+	padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	background-color: c(orange);
+	border: none;
+	@extend %avant-book;
+	font-size: 14px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: c(white);
+	&:hover {
+		cursor: pointer;
+		background-color: c(gray-light);
+		color: c(gray);
+	}
+}
+
+/* _____ N U M E R I K A _____ */
+%button-base, .button-base {
+	@extend %button;
+}

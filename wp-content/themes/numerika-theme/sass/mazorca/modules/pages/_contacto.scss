@@ -1,0 +1,260 @@
+$col-1: 100%/12;
+/*width: calc(#{$col-1} * 8);*/
+
+// C O N T A C T O
+.contacto {
+    margin-top: 75px;
+
+    &__container {
+        @extend %section-container-contacto;
+        margin: 60px auto 30px;
+        color: c(gray);
+
+        @include under(mobile) {
+            margin: 40px auto 0px;
+        }
+
+        .row-flex {
+            display: flex;
+            @include under(sm) {
+                flex-wrap: wrap;
+            }
+
+            .group {
+                &-one {
+                    width: 30%;
+                    @include under(md) {
+                        width: 20%;
+                    }
+                    @include under(sm) {
+                        width: 100%;
+                    }
+                }
+
+                &-two {
+                    width: 70%;
+                    @include under(md) {
+                        width: 80%;
+                    }
+                    @include under(sm) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    &__title {
+        @extend %sectores-title;
+        letter-spacing: 1px;
+        margin-left: 16%;
+        @include under(md) {
+            margin-left: 0;
+        }
+        @include under(sm) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__instrucciones {
+        @extend %candida-roman;
+        font-size: 16px;
+
+    }
+
+    .row-flex-top {
+        display: flex;
+        margin-top: 60px;
+        @include under(sm) {
+            margin-top: 40px;
+        }
+        @include under(mobile) {
+            flex-wrap: wrap;
+        }
+    }
+
+    .formulario {
+        width: 375px;
+        @include under(mobile) {
+            margin: 0 auto 40px;
+        }
+        @include under(xs) {
+            width: 98%;
+        }
+
+        form {
+            width: 375px;
+            @include under(xs) {
+                width: 100%;
+            }
+
+            input {
+                height: 40px;
+                border: 1px solid transparent;
+                margin-bottom: 20px;
+                background: #DEDEE2;
+                @extend %candida-roman;
+                font-size: 16px;
+                color: c(gray);
+
+                &::placeholder {
+                    @extend %avant-book;
+                    font-size: 12px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    color: c(gray);
+                }
+            }
+            input[type="submit"]{
+                height: auto;
+                color: c(orange);
+                @extend %avant-book;
+                font-size: 12px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                width: 44px;
+                background: transparent;
+                padding-left: 0;
+                margin-bottom: 0;
+                cursor: pointer;
+                &:hover {
+                    // border-bottom: 2px solid;
+                    text-decoration: underline;
+                }
+            }
+
+            p {
+                color: rebeccapurple;
+                @extend %candida-roman;
+                color: c(gray-medium);
+                font-size: 10px;
+                margin: -14px 0 20px 10px;
+            }
+
+            textarea {
+                height: 210px;
+                border: 1px solid transparent;
+                margin-bottom: 25px;
+                background: #DEDEE2;
+                @extend %avant-book;
+                font-size: 12px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                color: #000;
+
+                &::placeholder {
+                    @extend %avant-book;
+                    font-size: 12px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    color: #000;
+                }
+            }
+
+            .enviar {
+                height: auto;
+                color: c(orange);
+                @extend %avant-book;
+                font-size: 12px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                width: 44px;
+                background: transparent;
+                padding-left: 0;
+                margin-bottom: 0;
+                cursor: pointer;
+                &:hover {
+                    // border-bottom: 2px solid;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .other {
+        width: calc(100% - 375px);
+        padding: 10px 0 0 20px;
+        @include under(mobile) {
+            width: 90%;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        &__row {
+            margin-bottom: 40px;
+        }
+
+        &__title {
+            @extend %avant-demi;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        .redes {
+            display: flex;
+
+            a {
+                width: 20px;
+                height: 20px;
+                margin-right: 20px;
+
+                svg {
+                    &:hover {
+                        fill: c(orange);
+                    }
+                }
+
+                #linkedin {
+                    &:hover {
+                        fill: c(orange);
+                    }
+                }
+
+                #twitter {
+                    &:hover {
+                        fill: c(orange);
+                    }
+                }
+
+                img {
+
+                }
+            }
+        }
+
+        a {
+            &:hover {
+                color: c(orange);
+            }
+        }
+
+        .mail {
+            @extend %avant-book;
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+
+        .telefono {
+
+        }
+    }
+
+    // Notificación
+    .notificacion {
+        width: 100%;
+        height: 200px;
+        position: absolute;
+        background: c(gray);
+        top: 0;
+        z-index: 99;
+        color: white;
+        @extend %flex-center-xy;
+        text-align: center;
+        @extend %avant-demi;
+        font-size: 15px;
+        display: none;
+        @include under(mobile){
+            height: 120px;
+        }
+    }
+}

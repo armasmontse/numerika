@@ -1,0 +1,243 @@
+%paragraph {
+
+}
+
+/* _____ F o n t s _____ */
+%candida-bold, .candida-bold {
+	font-family: f(candida);
+	font-weight: bold;
+	font-style: normal;
+}
+
+%candida-italic, .candida-italic {
+	font-family: f(candida);
+	font-weight: normal;
+	font-style: italic;
+}
+
+%candida-roman, .candida-roman {
+	font-family: f(candida);
+	font-weight: normal;
+	font-style: normal;
+}
+
+%avant-light, .avant-light {
+	font-family: f(avant-gothic);
+	font-weight: 300;
+	font-style: normal;
+}
+
+%avant-medium, .avant-medium {
+	font-family: f(avant-gothic);
+	font-weight: 500;
+	font-style: normal;
+}
+
+%avant-demi, .avant-demi {
+	font-family: f(avant-gothic);
+	font-weight: normal;
+	font-style: normal;
+}
+
+%avant-book, .avant-book {
+	font-family: f(avant-gothic);
+	font-weight: 900;
+	font-style: normal;
+}
+
+
+/* _____ F o o t e r _____ */
+%info-footer, .info-footer {
+	@extend %avant-book;
+	font-size: 15px;
+    letter-spacing: .3px;
+    line-height: 22px;
+}
+
+%privacidad-footer, .privacidad-footer {
+	@extend %avant-book;
+	font-size: 12px;
+	letter-spacing: .3px;
+	line-height: 22px;
+	&:hover {
+		color: c(orange);
+	}
+}
+
+/* _____ H o m e _____ */
+%home-intro-content, .home-intro-content {
+	@extend %avant-demi;
+	font-size: 33px;
+	letter-spacing: .3px;
+	line-height: 45px;
+	@include under(mobile){
+		font-size: 24px;
+		letter-spacing: .3px;
+		line-height: 35px;
+	}
+}
+
+%home-sectores-content, .home-sectores-content {
+	@extend %avant-light;
+	font-size: 23px;
+    letter-spacing: .3px;
+	line-height: 33px;
+	@include under(mobile){
+		font-size: 20px;
+		line-height: 30px;
+	}
+}
+
+%home-metodologias-title, .home-metodologias-title {
+	@extend %avant-book;
+	font-size: 17px;
+    letter-spacing: 1.5px;
+	line-height: 28px;
+	text-transform: uppercase;
+	@include under(mobile){
+		font-size: 15px;
+		line-break: 20px;
+	}
+}
+
+/* _____ F i r m a _____ */
+%firma-membresias-content, .firma-membresias-content {
+	@extend %candida-roman;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+%firma-reconocimientos-premio-nombre, .firma-reconocimientos-premio-nombre {
+	@extend %avant-demi;
+	text-transform: uppercase;
+	font-size: 15px;
+	letter-spacing: 1px;
+	line-height: 25px;
+}
+
+%firma-reconocimientos-premio-otorga, .firma-reconocimientos-premio-otorga {
+	@extend %candida-roman;
+	font-size: 13px;
+	line-height: 23px;
+}
+
+%firma-equipo-puesto, .firma-equipo-puesto {
+	@extend %avant-book;
+	font-size: 14px;
+	letter-spacing: 1px;
+	line-height: 20px;
+	text-transform: uppercase;
+}
+
+%firma-equipo-nombre, .firma-equipo-nombre {
+	@extend %avant-demi;
+	font-size: 18px;
+	letter-spacing: .3px;
+	line-height: 20px;
+}
+
+%firma-equipo-especialidad, .firma-equipo-especialidad {
+	@extend %avant-book;
+	font-size: 12px;
+	letter-spacing: 1px;
+	line-height: 20px;
+}
+
+%firma-equipo-especialidad-lugar, .firma-equipo-especialidad-lugar {
+	@extend %candida-roman;
+	font-size: 13px;
+	line-height: 20px;
+}
+
+%firma-equipo-experiencia-titulo, .firma-equipo-experiencia-titulo {
+	@extend %avant-demi;
+	font-size: 14px;
+	letter-spacing: .3px;
+	line-height: 20px;
+}
+
+%firma-trayectoria-year, .firma-trayectoria-year {
+	@extend %avant-medium;
+	font-size: 11px;
+	line-height: 20px;
+	color: c(orange);
+}
+
+%firma-trayectoria-nombre, .firma-trayectoria-nombre {
+	@extend %avant-book;
+	font-size: 11px;
+	line-height: 15px;
+	color: c(orange);
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+}
+
+/* _____ S o l u c i o n e s _____ */
+%soluciones-pleca-title, .soluciones-pleca-title {
+	@extend %avant-book;
+	font-size: 18px;
+	letter-spacing: 1px;
+	line-height: 25px;
+	text-transform: uppercase;
+}
+
+%soluciones-pleca-content, .soluciones-pleca-content {
+	@extend %avant-demi;
+	font-size: 16px;
+	letter-spacing: .5px;
+	line-height: 23px;
+}
+
+%soluciones-detalles-content, .soluciones-detalles-content {
+	@extend %avant-demi;
+	font-size: 23px;
+	letter-spacing: 1px;
+	line-height: 33px;
+	@include under(mobile) {
+		font-size: 19px;
+		line-height: 25px;
+	}
+}
+
+%soluciones-proyectos-titulo, .soluciones-proyectos-titulo {
+	@extend %avant-book;
+	font-size: 13px;
+	letter-spacing: .5px;
+	line-height: 22px;
+	text-transform: uppercase;
+}
+
+%soluciones-proyectos-nombre, .soluciones-proyectos-nombre {
+	@extend %avant-demi;
+	font-size: 13px;
+	letter-spacing: .3px;
+	line-height: 28px;
+	
+	&:hover {
+		color: c(orange);
+	}
+}
+
+%soluciones-caracteristicas-nombre, .soluciones-caracteristicas-nombre {
+	@extend %candida-roman;
+	font-size: 20px;
+	line-height: 25px;
+	@include under(mobile) {
+		font-size: 16px;
+		line-height: 20px;
+	}
+}
+
+/* Single proyecto */
+%single-planteamiento-content, .single-planteamiento-content {
+	@extend %avant-demi;
+	font-size: 18px;
+	letter-spacing: .3px;
+	line-height: 24px;
+}
+
+%single-solucion-parrafo, .single-solucion-parrafo {
+	@extend %candida-roman;
+	font-size: 16px;
+	line-height: 21px;
+}

@@ -1,0 +1,100 @@
+%link {
+	
+	&:hover,
+	&:active,
+	.selected {
+		cursor: pointer;
+		text-decoration: none;
+	}
+}
+
+//Menú
+%link-menu, .link-menu {
+	@extend %avant-book;
+	font-size: 14px;
+	letter-spacing: 1px;
+	// color: c(gray);
+	text-transform: uppercase;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+%link-submenu, .link-submenu {
+	@extend %avant-book;
+	font-size: 14px;
+	letter-spacing: 1px;
+	color: c(gray);
+	text-transform: uppercase;
+
+	&:hover {
+		background-color: c(gray-light);
+	}
+}
+
+%link-read, .link-read {
+	@extend %link-menu;
+	font-size: 12px;
+	color: c(orange);
+}
+
+%link-footer, .link-footer {
+	@extend %avant-book;
+	font-size: 18px;
+	letter-spacing: .5px;
+
+	&:hover {
+		color: c(orange);
+		cursor: pointer;
+	}
+}
+
+%link-pleca-contacto, .link-pleca-contacto {
+	@extend %avant-demi;
+	font-size: 13px;
+	letter-spacing: .5px;
+	border-bottom: 2px solid c(white);
+
+	&:hover {
+		color: c(orange);
+		border-bottom: 2px solid c(orange);
+		cursor: pointer;
+	}
+}
+
+// Proyectos
+%proyectos-link, .proyectos-link {
+    @extend %avant-book;
+    font-size: 14px;
+    text-transform: uppercase;
+	color: c(orange);
+	letter-spacing: 1px;
+	border-bottom: 1px solid transparent;
+	padding-bottom: 7px;
+
+    &:hover {
+		// text-decoration: underline !important;
+		border-bottom: 1px solid c(orange);
+    }
+
+    @include under(mobile){
+
+    }
+}
+
+// Single proyecto
+%link-single-banner, .link-single-banner {
+	@extend %avant-book;
+	font-size: 12px;
+	letter-spacing: 1px;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: c(orange);
+
+	&:hover {
+		// text-decoration: underline;
+		border-bottom: 1px solid c(orange);
+		cursor: pointer;
+	}
+}

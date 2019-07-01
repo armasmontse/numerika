@@ -1,0 +1,190 @@
+/* A s p e c t   r a t i o */
+%box-aspect-ratio, .box-aspect-ratio  {
+    position: relative;
+    width: 100%;
+    // background-color: whitesmoke;
+}
+
+%imagen-aspect-ratio, .imagen-aspect-ratio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    object-fit: cover;
+}
+
+/* W y s i w y g */
+%contenido-wysiwyg {
+
+    h1, h2, h3, h4, h5, h6 {
+
+    }
+
+    p {
+
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    em {
+        font-style: italic;
+    }
+
+    strong {
+        // font-weight: bold;
+        font-weight: 500;
+    }
+
+    ul {
+
+        li {
+            &::before {
+                // content: "\2022";
+                // margin: 0 10px;
+            }
+        }
+    }
+
+    del {
+        text-decoration: underline;
+    }
+}
+
+/* W y s i w y g   s o l u c i ó n */
+%contenido-wysiwyg-solucion {
+
+    h1, h2, h3, h4, h5, h6 {
+        @extend %single-solucion-content;        
+    }
+
+    p {
+        @extend %single-solucion-parrafo;
+
+        em {
+            font-style: italic;
+        }
+
+        a {
+            text-decoration: underline;
+        }
+    }
+
+}
+
+/* F l e x   c e n t e r */
+%flex-center-xy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* W - H 100 */
+%wh-100 {
+    width: 100%;
+    height: 100%;
+}
+
+%w50-h100 {
+    width: 50%;
+    height: 100%;
+}
+
+/* ---------- S l i c k   s l i d e r ---------- */
+%dots-slick {
+    ul.slick-dots {
+        display: flex;
+        justify-content: center;
+        bottom: 10px;
+        position: absolute;
+        width: 100%;
+
+        li button {
+            margin: 10px;
+            font-size: 0;
+            width: 10px;
+            height: 10px;
+            padding: 0;
+            border: .5px solid black;
+            border-radius: 10px;
+            background: transparent;
+        }
+    }
+
+    .slick-active button {
+        border: 0.5px solid c(green) !important;
+        background: c(green) !important;
+    }
+
+    .slick-initialized .slick-slide {
+        outline: none;
+    }
+}
+
+%arrows-slick {
+    .slick-arrow {
+        width: 30px;
+        height: 20px;
+        position: absolute;
+        background-repeat: no-repeat;
+        top: 50%;
+        background-color: transparent;
+        cursor: pointer;
+        @include under(mobile){
+            top: 5%;
+        }
+    }
+    
+    .galeria-prev,
+    .galeria-anterior {
+        background-image: url(../images/iconos/numerika-right.svg) !important;
+        transform: rotate(180deg);
+        left: 7%;
+        &:hover {
+            background-image: url(../images/iconos/numerika-right-hover.svg) !important;
+            transform: rotate(360deg);
+        }
+        @include under(md) {
+            left: 3%;
+        }
+    }
+    
+    .galeria-next,
+    .galeria-siguiente {
+        background-image: url(../images/iconos/numerika-right.svg) !important;
+        right: 7%;
+        &:hover {
+            background-image: url(../images/iconos/numerika-right-hover.svg) !important;
+            transform: rotate(180deg);
+        }
+        @include under(md) {
+            right: 3%;
+        }
+    }
+}
+
+/* C o n t a i n e r */
+%section-container, .section-container {
+    width: 100%;
+    max-width: 960px;
+    @include under(md){
+        padding: 0 20px;
+    }
+    @include under(sm){
+        padding: 0px;
+    }
+}
+
+%section-container-contacto, .section-container-contacto {
+    width: 100%;
+    max-width: 990px;
+    @include under(md){
+        padding: 0 20px;
+    }
+    @include under(sm){
+        padding: 0px;
+    }
+}

@@ -1,0 +1,199 @@
+$col-1: 100%/12;
+/*width: calc(#{$col-1} * 8);*/
+
+.home {
+
+    // I n t r o
+    .intro {
+        background: c(gray);
+        color: white;
+        margin-top: 75px;
+
+        &__container {
+            @extend %section-container;
+            margin: 0 auto;
+        }
+
+        &__content {
+            @extend %home-intro-content;
+            width: 85%;
+            max-width: 620px;
+            margin: 160px 0;
+            @include under(mobile){
+                width: 100%;
+                margin: 80px 0;
+            }
+        }
+    }
+
+    // S e c t o r e s
+    .sectores {
+
+        &__container {
+            @extend %section-container;
+            margin: 60px auto 120px;
+            display: flex;
+            @include under(mobile){
+                margin: 60px auto;
+                flex-wrap: wrap;
+            }
+
+            .group-one {
+                width: 30%;
+                @include under(mobile){
+                    width: 100%;
+                    margin-bottom: 30px;
+                }
+            }
+
+            .group-two {
+                width: 70%;
+                @include under(mobile){
+                    width: 100%;
+                }
+            }
+        }
+
+        &__title {
+            @extend %sectores-title;
+            letter-spacing: 1px;
+        }
+
+        &__subtitle {
+            @extend %sectores-subtitle;
+            margin-bottom: 20px;
+            @include under(mobile){
+                margin-bottom: 10px;
+            }
+        }
+
+        &__content {
+            @extend %home-sectores-content;
+        }
+
+        .private {
+            background-color: c(green);
+            color: white;
+        }
+
+        .public {
+            background-color: c(purple);
+            color: white;
+        }
+    }
+
+    // S o l u c i o n e s
+    .soluciones {
+        background: c(gray);
+        color: c(white);
+
+        &__container {
+            @extend %section-container;
+            margin: 120px auto 40px;
+            display: flex;
+            flex-direction: column;
+            @include under(mobile){
+                margin: 60px auto 20px;
+            }
+        }
+
+        &__title {
+            @extend %soluciones-title;
+            text-align: center;
+            padding: 0 20px;
+            margin-bottom: 80px;
+            @include under(mobile){
+                margin-bottom: 60px;
+                padding: 0;
+            }
+            p{
+                word-break: break-all;
+            }
+        }
+
+        &__loop {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            &--item{
+                width: 33%;
+                margin-bottom: 80px;
+                @extend %flex-center-xy;
+                @include under(sm){
+                    width: 50%;
+                }
+                @include under(mobile){
+                    margin-bottom: 40px;
+                }
+
+                a {
+                    border-bottom: 4px solid c(gray);
+                    padding-bottom: 10px;
+                    &:hover {
+                        border-bottom: 4px solid c(orange);
+                    }
+                }
+
+                .card-solution {
+                    width: 168px;
+                    height: 168px;
+                    @extend %flex-center-xy;
+                    text-align: center;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    @include under(mobile) {
+                        width: 125px;
+                        height: 125px;
+                    }
+
+                    &__title {
+                        @extend %home-metodologias-title;
+                        padding: 0 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    // L O G O S
+    .logos {
+
+        &__container {
+            @extend %section-container;
+            margin: 60px auto;
+        }
+
+        &__slider {
+
+            li {
+                margin-right: 20px;
+
+                &:focus {
+                    outline: none;
+                }
+
+                img {
+                    width: 80%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+.home .sectores .private:hover {
+    background-image: url(http://numerika.cltvo.com/wp-content/themes/numerika-theme/images/home/sectores/sector-privado.png);
+    background-position: center;
+    background-size: cover;
+    transform: scale(1);
+    transition: all .5s;
+}
+
+.home .sectores .public:hover {
+    background-image: url(http://numerika.cltvo.com/wp-content/themes/numerika-theme/images/home/sectores/sector-publico.png);
+    background-position: center;
+    background-size: cover;
+    transform: scale(1);
+    transition: all .5s;
+}

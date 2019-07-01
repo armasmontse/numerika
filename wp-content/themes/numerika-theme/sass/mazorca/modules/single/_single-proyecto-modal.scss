@@ -1,0 +1,73 @@
+$col-1: 100%/12;
+
+// --- M o d a l
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #FFF;;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    img {
+        height: 70vh;
+        width: auto;
+        margin: 0 auto 30px;
+        @include under(md) {
+            height: auto;
+        }
+    }
+
+    &__creditos {
+        @extend %candida-roman;
+        font-size: 12px;
+        line-height: 16px;
+        margin: 0 auto;
+        width: 60%;
+        color: c(gray-medium);
+        @include under(sm) {
+            width: 85%;
+        }
+    }
+}
+
+/* Modal Content/Box */
+.modal-content {
+    margin: 0 auto;
+    width: 80%;
+    @include under(md) {
+        width: 90%;
+    }
+}
+
+.open {
+    cursor: pointer;
+}
+
+/* The Close Button */
+.close {
+    color: gray;
+    float: right;
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+    display: block;
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.close:hover,
+.close:focus {
+    text-decoration: none;
+    cursor: pointer;
+}

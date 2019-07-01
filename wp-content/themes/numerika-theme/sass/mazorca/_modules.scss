@@ -1,0 +1,22 @@
+//_________________________ Modules _________________________ \\
+
+/* _____ G E N E R A L _____ */
+@import "modules/general/_header";
+@import "modules/general/_footer";
+
+/* _____ P A G E S _____ */
+@import "modules/pages/_home";
+@import "modules/pages/_firma";
+@import "modules/pages/_contacto";
+@import "modules/pages/_page-template";
+
+/* _____ A R C H I V E _____ */
+@import "modules/archive/_soluciones";
+@import "modules/archive/_proyectos";
+
+/* _____ S I N G L E _____ */
+@import "modules/single/_single-proyecto";
+@import "modules/single/_single-proyecto-modal";
+
+/* _____ A T O M O S _____ */
+@import "modules/pages/_atomos";

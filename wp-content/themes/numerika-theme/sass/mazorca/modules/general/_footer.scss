@@ -1,0 +1,152 @@
+$col-1: 100%/12;
+
+.footer {
+	height: 115px;
+	margin-top: 50px;
+	@include under(xs){
+		height: auto;
+	}
+
+	&__container {
+		max-width: 1200px;
+		@extend %wh-100;
+		display: flex;
+		margin: 0 auto;
+		color: c(gray);
+	}
+
+	.group-one {
+		@extend %w50-h100;
+		display: flex;
+		@include under(md-header){
+			width: 25%;
+		}
+		@include under(xs){
+			width: 40%;
+		}
+	}
+
+	.group-two {
+		@extend %w50-h100;
+		display: flex;
+		@include under(md-header){
+			width: 75%;
+		}
+		@include under(xs){
+			flex-direction: column;
+		}
+
+		.column {
+
+			&-one {
+				width: 50%;
+				@extend %flex-center-xy;
+				@include under(md-header){
+					width: 65%;
+					flex-direction: column;
+				}
+				@include under(xs){
+					width: 100%;
+					align-items: flex-start;
+					padding-left: 15px;
+				}
+
+				.info {
+					@extend %info-footer;
+				}
+			}
+
+			&-two {
+				@extend %flex-center-xy;
+				width: 50%;
+				flex-direction: column;
+				@include under(md-header){
+					width: 35%;
+				}
+				@include under(xs){
+					width: 74%;
+					padding: 20px 0;
+				}
+
+				.redes {
+					display: flex;
+					width: 105px;
+					@include under(xs) {
+						// width: 115px;
+						width: 100%;
+						padding-left: 15px;
+					}
+
+					a {
+						width: 30px;
+						height: 30px;
+						margin-right: 20px;
+						margin-bottom: 10px;
+
+						#linkedin {
+							&:hover {
+								fill: c(orange);
+							}
+						}
+
+						#twitter {
+							&:hover {
+								fill: c(orange);
+							}
+						}
+
+						img {
+							width: 30px;
+							height: 30px;
+						}
+					}
+				}
+
+				.privacidad {
+					@extend %privacidad-footer;
+                    @include under(sm){
+                        padding-left: 15px;
+    width: 100%;
+                    }
+					a {
+
+					}
+				}
+			}
+		}
+	}
+
+	&__logo {
+		width: auto;
+		height: 115px;
+		margin: 0;
+	}
+
+	&__contacto {
+		margin: 20px 30px;
+		@include under(md-header){
+			display: none;
+		}
+
+		a {
+			@extend %link-footer;
+		}
+
+		&--mobile {
+			display: none;
+			@include under(md-header){
+				display: block;
+				margin-left: -24px;
+				margin-bottom: 10px;
+			}
+			@include under(xs){
+				margin-left: 0px;
+			}
+
+			a {
+				@extend %link-footer;
+			}
+
+		}
+	}
+}

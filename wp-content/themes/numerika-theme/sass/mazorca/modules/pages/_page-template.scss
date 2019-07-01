@@ -1,0 +1,50 @@
+$col-1: 100%/12;
+/*width: calc(#{$col-1} * 8);*/
+
+// P A G E   T E M P L A T E
+.page-template {
+    margin-top: 75px;
+    color: c(gray);
+
+    &__container {
+        width: 100%;
+        max-width: 890px;
+        margin: 60px auto;
+        @include under(md){
+            padding: 0 20px;
+        }
+        @include under(sm){
+            padding: 0px;
+        }
+
+        .title {
+            @extend %avant-demi;
+            font-size: 30px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            @extend %candida-roman;
+            font-size: 13px;
+
+            h1, h2, h3, h4, h5, h6 {
+                @extend %avant-book;
+                font-size: 20px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-bottom: 20px;
+            }
+
+            a {
+                color: c(orange);
+                text-decoration: underline;
+            }
+
+            p {
+                line-height: 16px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,170 @@
+$col-1: 100%/12;
+/*width: calc(#{$col-1} * 8);*/
+
+// P R O Y E C T O S
+.proyectos {
+    margin-top: 75px;
+    &__container {
+        @extend %section-container;
+        margin: 60px auto 30px;
+        color: c(gray);
+
+        // Filtros
+        .filtros {
+            margin-bottom: 70px;
+            @include under(mobile) {
+                margin-bottom: 60px;
+            }
+            @include under(xs) {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            &__label {
+                @extend %firma-equipo-experiencia-titulo;
+                @include under(xs) {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+            }
+
+            select {
+                width: 240px;
+                height: 30px;
+                background-color: transparent;
+                margin-left: 10px;
+                border: none;
+                border-bottom: 1px solid c(gray);
+                border-radius: 0;
+                @extend %firma-equipo-puesto;
+                padding-left: 15px;
+
+                background-image: url('../images/iconos/down_num.svg');
+                background-size: 15px 15px;
+                background-repeat: no-repeat;
+                background-position: right;
+
+                @include under(xs) {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    // Loop
+    .loop {
+
+        &__lista {
+
+        }
+
+        &__row {
+            display: flex;
+            margin-bottom: 90px;
+            height: 270px;
+            @include under(mobile) {
+                margin-bottom: 60px;
+            }
+            @include under(xs) {
+                flex-wrap: wrap;
+                height: auto;
+            }
+
+            .group {
+
+                &-one {
+                    width: 28%;
+                    height: 100%;
+                    @include under(mobile) {
+                        width: 70%;
+                    }
+                    @include under(xs) {
+                        margin: 0 auto 30px;
+                    }
+                }
+
+                &-two {
+                    width: 72%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 20px;
+                    position: relative;
+
+                    @include under(mobile) {
+                        width: calc(100% - 120px);
+                    }
+                    @include under(xs) {
+                        width: 100%;
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+
+        &__box {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__categorias {
+            @extend %proyectos-categoria;
+            margin-bottom: 5px;
+        }
+
+        &__proyecto {
+            @extend %proyectos-nombre;
+            margin-bottom: 34px;
+            @include under(mobile) {
+                margin-bottom: 20px;
+            }
+        }
+
+        &__extracto {
+            @extend %proyectos-extracto;
+            @include under(xs) {
+                margin-bottom: 20px;
+            }
+        }
+
+        &__link {
+            @extend %proyectos-link;
+            width: 90px;
+            margin-top: 15px;
+            //position: absolute;
+            bottom: 0;
+            @include under(xs) {
+                position: relative;
+            }
+        }
+    }
+
+
+    .contenido-to-top {
+		background-image: url(../images/iconos/top.svg);
+		background-size: 20px;
+		background-position: center;
+
+		width: 20px;
+		height: 20px;
+
+        position: fixed;
+        bottom: 190px;
+        right: 10%;
+		cursor: pointer;
+
+		&:hover {
+			background-image: url(../images/iconos/top-hover.svg);
+		}
+		@include under(sm) {
+			right: 3%;
+		}
+	}
+}

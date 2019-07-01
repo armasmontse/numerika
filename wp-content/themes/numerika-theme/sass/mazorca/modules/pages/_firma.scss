@@ -1,0 +1,421 @@
+$col-1: 100%/12;
+/*width: calc(#{$col-1} * 8);*/
+
+// F I R M A
+.firma {
+    // background-color: cadetblue;
+    padding-top: 75px;
+
+    // I n t r o
+    .intro{
+        background: c(green);
+        color: white;
+        
+        &__container {
+            @extend %section-container;
+            margin: 160px auto 160px;
+            @include under(mobile){
+                margin: 80px 0px 80px;
+            }
+        }
+
+        &__title {
+            @extend %home-intro-content;
+            margin-bottom: 40px;
+            @include under(mobile){
+                margin-bottom: 30px;
+            }
+        }
+
+        &__content {
+            @extend %home-sectores-content;
+            width: 100%;
+            max-width: 770px;
+        }
+    }
+
+    // M e m b r e s i a s
+    .membresias {
+        
+        &__container {
+            @extend %section-container;
+            margin: 120px auto 85px;
+            @include under(mobile){
+                margin: 60px 0px 45px;
+            }
+
+            .row {
+                display: flex;
+                @include under(mobile){
+                    flex-wrap: wrap;
+                }
+
+                .group-one {
+                    width: 30%;
+                    @include under(mobile){
+                        width: 100%;
+                        margin-bottom: 20px;
+                    }               
+                }
+    
+                .group-two {
+                    width: 70%;
+                    @include under(mobile){
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        &__title {
+            @extend %sectores-title;
+            letter-spacing: 1px;
+        }
+
+        &__content {
+            @extend %firma-membresias-content;
+            margin-bottom: 25px;
+            color: c(gray);
+        }
+
+        &__logos {
+            display: flex;
+            margin-left: 30%;
+            @include under(sm){
+                margin-left: 0;
+            }
+
+            &--lista {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+
+                li {
+                    width: 25%;
+                    margin-bottom: 15px;
+                    img {
+                        width: 85%;
+                        height: auto;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+
+    // R e c o n o c i m i e n t o s
+    .reconocimientos {
+        background-color: c(gray);
+        color: c(white);
+
+        &__container {
+            @extend %section-container;
+            margin: 120px auto 60px;
+            @include under(mobile){
+                margin: 60px auto 30px;
+            }
+        }
+
+        &__title {
+            @extend %home-intro-content;
+            margin-bottom: 60px;
+            @include under(mobile){
+                margin-bottom: 30px;
+            }
+        }
+
+        .row {
+            width: 100%;
+            display: flex;
+            margin-bottom: 60px;
+            @include under(mobile){
+                flex-wrap: wrap;
+                margin-bottom: 30px;
+            }
+
+            .group-one {
+                @extend %flex-center-xy;
+                width: 27%;
+                max-width: 270px;
+                height: 100%;
+                @include under(mobile){
+                    width: 350px;
+                    justify-content: flex-start;
+                    margin-bottom: 30px;
+                }
+
+                img {
+                    width: 75%;
+                    height: auto;
+                    @include under(mobile){
+                        width: 60%;
+                    }
+                }
+            }
+
+            .group-two {
+                width: 73%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                @include under(mobile){
+                    width: 100%;
+                }
+            }
+        }
+
+        &__nombre {
+            @extend %firma-reconocimientos-premio-nombre;
+            display: flex;
+            &:before {
+                content: "\2022";
+            }
+        }
+
+        &__otorga {
+            @extend %firma-reconocimientos-premio-otorga;
+            margin-left: 10px;
+        }
+    }
+
+    // E q u i p o
+    .equipo {
+
+        &__container {
+            @extend %section-container;
+            margin: 120px auto 40px;
+            @include under(mobile){
+                margin: 60px auto 0px;
+            }
+        }
+
+        &__foto {
+            @extend %box-aspect-ratio;
+            padding-bottom: 40%;
+            margin-bottom: 60px;
+            img {
+                @extend %imagen-aspect-ratio;
+            }
+        }
+
+        .row {
+            width: 100%;
+            display: flex;
+            @include under(mobile){
+                flex-wrap: wrap;
+            }
+
+            .group-one {
+                width: 30%;
+                height: 100%;
+                @include under(mobile){
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .group-two {
+                width: 70%;
+                height: 100%;
+                @include under(mobile){
+                    width: 100%;
+                }
+            }
+        }
+
+        &__title {
+            @extend %sectores-title;
+            letter-spacing: 1px;
+        }
+
+        &__description {
+            @extend %firma-membresias-content;
+            margin-bottom: 60px;
+            color: c(gray);
+        }
+
+        &__loop {
+            width: 70%;
+            margin-left: 30%;
+            display: flex;
+            flex-wrap: wrap;
+            color: c(gray);
+            @include under(sm){
+                width: 100%;
+                margin-left: 0;
+            }
+
+            .card {
+                width: 50%;
+                margin-bottom: 80px;
+                padding-right: 10px;
+                @include under(mobile){
+                    width: 100%;
+                    margin-bottom: 60px;
+                }
+
+                &__puesto {
+                    @extend %firma-equipo-puesto;
+                    color: c(orange);
+                    margin-bottom: 60px;
+                    position: relative;
+
+                    &::before {
+                        content: " ";
+                        position: absolute;
+                        border: 1px solid c(orange);
+                        width: 20px;
+                        height: 0;
+                        top: 32px;
+                    }
+                }
+
+                &__nombre {
+                    @extend %firma-equipo-nombre;
+                    margin-bottom: 10px;
+                }
+
+                &__profesion {
+                    @extend %firma-equipo-puesto;
+                    line-height: 17px;
+                    margin-bottom: 20px;
+                }
+
+                &__box {
+                    margin-bottom: 20px;
+
+                    .especialidad {
+                        @extend %firma-equipo-especialidad;
+                        text-transform: uppercase;
+
+                        &__lugar {
+                            @extend %firma-equipo-especialidad-lugar;
+                        }
+                    }
+                }
+
+                &__experiencia {
+                    padding-top: 20px;
+                    @include under(mobile){
+                        padding-top: 0px;
+                    }
+
+                    .title {
+                        @extend %firma-equipo-experiencia-titulo;
+                    }
+
+                    .description {
+                        @extend %firma-equipo-especialidad-lugar;
+                    }
+                }
+            }
+        }
+    }
+
+    // T r a y e c t o r í a
+    .trayectoria {
+
+        &__banner {
+            background-color: c(orange);
+            height: 175px;
+            @include under(mobile){
+                height: auto;
+            }
+
+            &--container {
+                @extend %section-container;
+                @extend %home-intro-content;
+                margin: 0 auto;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                color: white;
+                @include under(md) {
+                    padding: 20px;
+                }
+            }
+        }
+        
+        &__container {
+            @extend %section-container;
+            margin: 30px auto 70px;
+
+            @extend %arrows-slick;
+
+            @include under(mobile){
+                margin: 30px auto 0px;            
+            }
+        }
+
+        &__slider {
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+                width: 20%;
+                @extend %flex-center-xy;
+                flex-direction: column;
+                padding: 0 10px;
+                &:focus {
+                    outline: none;
+                }
+
+                .year {
+                    @extend %firma-trayectoria-year;
+                    color: c(orange);
+                    padding-bottom: 40px;
+                    border-bottom: 1px solid c(gray-light);
+                    @include under(mobile) {
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .vertical-line {
+                    width: 1px;
+                    height: 80px;
+                    background-color: c(gray-light);
+                    margin: 40px 0 20px;
+                    @include under(mobile) {
+                        height: 1px;
+                        margin: 0;
+                        background-color: white;
+                    }
+                }
+
+                .flex-row {
+                    @extend %flex-center-xy;
+                    flex-direction: column;
+                    @include under(mobile){
+                        width: 100%;
+                        flex-wrap: wrap;
+                        flex-direction: row;
+                    }
+                }
+                
+                .card {
+                    margin-bottom: 40px;
+                    @include under(mobile){
+                        width: 50%;
+                        margin-bottom: 30px;
+                    }
+
+                    &__logo {
+                        margin-bottom: 20px;
+
+                        img {
+                            width: auto;
+                            height: auto;
+                            margin: 0 auto;
+                        }
+                    }
+                    
+                    &__name {
+                        @extend %firma-trayectoria-nombre;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
